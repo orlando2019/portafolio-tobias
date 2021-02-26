@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../modal/modal.component';
 import { Modal } from '../modal/modal.interface';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-image-item',
@@ -18,7 +19,6 @@ export class ImageItemComponent implements OnInit {
   open() {
     const modalRef = this.modalService.open(ModalComponent, {
       centered: true,
-      size: 'lg',
     });
     modalRef.componentInstance.info = this.info;
   }
