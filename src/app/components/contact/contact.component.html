@@ -12,7 +12,7 @@
 						<div class="form-floating mb-3 controls mb-0 pb-2">
 							<input class="form-control" formControlName="name" type="text" placeholder="Nombre"
 								[class]="isValidField('name')" />
-							<label>Nombre</label>
+							<label>Nombre*</label>
 							<!-- Mostrando Errores de las validaciones -->
 							<div class="invalid-feedback">
 								<span *ngIf="nameField.errors?.required"> Por Favor Digite Un Nombre </span>
@@ -27,7 +27,7 @@
 						<div class="form-group form-floating mb-3">
 							<input class="form-control" formControlName="email" type="email" placeholder="Direccion Email"
 								[class]=" isValidField('email')" />
-							<label>Dirireción Email</label>
+							<label>Dirireción Email*</label>
 							<!-- Mostrando Errores de las validaciones -->
 							<div class="invalid-feedback">
 								<span *ngIf="emailField.errors?.required"> Por Favor Digite Un Email </span>
@@ -40,7 +40,7 @@
 						<div class="form-group form-floating mb-3">
 							<input class="form-control" type="tel" placeholder="Número Del Móvil" formControlName="movil"
 								[class]="isValidField('movil')" />
-							<label>Número Del Móvil</label>
+							<label>Número Del Móvil*</label>
 							<!-- Mostrando Errores de las validaciones telefono movil -->
 							<div class="invalid-feedback">
 								<span *ngIf="movilField.errors?.required">
@@ -56,7 +56,7 @@
 							<div class="form-group form-floating">
 								<textarea formControlName="message" class="form-control" style="height: 180px" rows="5"
 									placeholder="Mensage" [class]="isValidField('message')"></textarea>
-								<label>Mensage</label>
+								<label>Mensage*</label>
 								<!-- Mostrando Errores de las validaciones -->
 								<div class="invalid-feedback">
 									<span *ngIf="messageField.errors?.required">

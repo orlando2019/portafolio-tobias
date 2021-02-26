@@ -40,13 +40,21 @@ export class ContactComponent implements OnInit {
   onSave(): void {
     if (this.contactForm.valid) {
       const formValue = this.contactForm.value;
-      console.log(formValue);
+      //console.log(formValue);
+      Swal.fire({
+        icon: 'success',
+        title: 'Mensaje Enviado!!',
+        text: 'Mensaje enviado satifactoriamente',
+        timer: 1500,
+      });
+      this.contactForm.reset();
     } else {
       //console.log('No Valid');
       Swal.fire({
         icon: 'error',
         title: 'Oops... ¡Algo salió mal!',
         text: 'Debes Llenar todos los campos',
+        timer: 2500,
       });
     }
   }
